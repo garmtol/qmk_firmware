@@ -34,12 +34,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
      * │Ctl │Sup │Alt │                        │Alt │Sup │M(2)│Ctl │
      * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
-    */
-   LAYOUT_60_ansi(
+     */
+    LAYOUT_60_ansi(
         KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,      KC_BSPC,
         KC_TAB,      KC_Q, KC_W, XXXXXXX, KC_R, KC_T, KC_Y, KC_BSPC, KC_HOME, KC_PGUP, KC_PSCR, KC_INS, XXXXXXX, XXXXXXX,
         TO(0),      KC_A, KC_S, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX, KC_ENT,
         KC_LSFT,      KC_Z, KC_X, KC_C, KC_V, XXXXXXX, KC_N, KC_DEL, KC_END, KC_PGDN, XXXXXXX,      KC_RSFT,
-        KC_LCTL, KC_LCMD,      KC_LOPT,           KC_SPC,                KC_ROPT, KC_APP,      XXXXXXX, KC_RCTL
-   )
+        KC_LCTL, KC_LCMD,      KC_LOPT,           KC_SPC,                KC_ROPT, KC_APP,      MO(2), KC_RCTL
+    ),
+
+    /* LAYOUT_60_ansi
+     * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+     * │   │   │   │   │   │   │   │   │   │   │   │   │   │       │
+     * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+     * │     │RTo│RMo│RHI│RHD│RSI│RSD│RVI│RVD│   │   │   │   │     │
+     * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
+     * │      │RMP│   │   │   │   │   │   │   │   │   │   │        │
+     * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
+     * │        │   │   │   │BD │BTo│BI │BSt│   │   │   │          │
+     * ├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+     * │    │    │    │                        │    │    │    │    │
+     * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+     */
+    LAYOUT_60_ansi(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,
+        XXXXXXX,      RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
+        XXXXXXX,      RGB_M_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, BL_DEC, BL_TOGG, BL_INC, BL_STEP, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,
+        XXXXXXX, XXXXXXX,      XXXXXXX,           XXXXXXX,                XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX
+    )
 };
